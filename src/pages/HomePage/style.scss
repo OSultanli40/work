@@ -1,0 +1,183 @@
+:root { --nav-height: 72px; }           /* adjust if your Nav height differs */
+.mt-nav { margin-top: var(--nav-height); }
+
+.hero { position: relative; overflow: hidden; }
+.hero .carousel,
+.hero .carousel-inner,
+.hero .carousel-item,
+.hero .hero-slide {
+  height: calc(100vh - var(--nav-height));
+  min-height: 520px;
+}
+
+.hero-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Slides with your Unsplash images */
+.bg1 {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.12) 100%),
+    url('https://images.unsplash.com/photo-1676902377431-cb6a7ed667b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2832')
+    center/cover no-repeat;
+}
+
+.bg2 {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.12) 100%),
+    url('https://images.unsplash.com/photo-1551771279-b47900068e00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+    center/cover no-repeat;
+}
+
+.bg3 {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.12) 100%),
+    url('https://images.unsplash.com/photo-1573295918481-c08976660b42?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2069')
+    center/cover no-repeat;
+}
+
+.bg4 {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.12) 100%),
+    url('https://images.unsplash.com/photo-1757340347257-c45bb8589615?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070')
+    center/cover no-repeat;
+}
+
+/* Overlay (if you want extra gradient separate from the background) */
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.12) 100%);
+}
+
+
+
+
+
+
+
+/* Order form section (keeps previous styling, tightened to match screenshot) */
+.order-form-section {
+  background: #f3f1f1;
+  padding: 2.6rem 16px 40px;
+  text-align: center;
+}
+
+.order-form-section .order-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.order-form-section h1 {
+  font-size: 40px;
+  margin: 0 0 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.order-form-section .order-desc {
+  max-width: 1280px;
+  margin: 0 auto 28px;
+  color: #111;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.order-form-section .order-desc .order-email {
+  color: #d31b1b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.order-form-section .order-cta {
+  margin: 18px 0;
+}
+
+.order-form-section .order-button {
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+  padding: 14px 28px;
+  font-size: 18px;
+  border: 4px double #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s;
+}
+
+.order-form-section .order-button:hover {
+  transform: translateY(-3px);
+  background: rgba(0,0,0,0.04);
+}
+
+.order-form-section .order-quote {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #111;
+  font-style: normal;
+}
+
+.order-form-section .order-divider {
+  margin-top: 34px;
+  border-bottom: 1px solid #000;
+}
+
+
+
+
+@media (max-width: 720px) {
+  .order-form-section h1 {
+    font-size: 28px;
+  }
+  .order-form-section .order-desc { font-size: 16px; padding: 0 10px; }
+  .order-form-section .order-button { font-size: 16px; padding: 12px 22px; }
+
+}
+
+
+
+/* Caption styling */
+.caption {
+  position: relative;
+  max-width: 840px;
+  margin: 0 0 10vh;
+  color: #fff;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .caption { margin: 0; padding: 2rem 2.5rem; }
+}
+
+.caption h1 {
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: .2px;
+  font-size: clamp(28px, 5vw, 60px);
+  margin-bottom: .5rem;
+}
+.caption p {
+  font-size: clamp(14px, 2.2vw, 20px);
+  opacity: .95;
+  margin: 0;
+}
+
+/* Smooth caption entrance on each slide */
+.carousel-item .caption {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.carousel-item.active .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Indicators round */
+.carousel-indicators [data-bs-target] {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+
