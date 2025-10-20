@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next"; // import i18n hook
+import logoUrl from "../../assets/img/BridgeLineTrading_Logo.svg";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -77,7 +78,7 @@ export default function Navbar() {
             <img
               width={50}
               height={50}
-              src="../../assets/img/BridgeLineTrading_Logo.svg"
+              src={logoUrl}
               alt="Bridge Line Trading logo"
             />
             <span style={{ letterSpacing: "0.5px" }}>Bridge Line Trading</span>
