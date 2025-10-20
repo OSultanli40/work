@@ -17,7 +17,12 @@ import React from 'react'
 import { RouterProvider } from 'react-router-dom'
 import {routes} from '../routes'
 
+const basePath = new URL(
+  import.meta.env.BASE_URL,
+  document.baseURI
+).pathname.replace(/\/$/, '') || '/'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <RouterProvider basename={import.meta.env.BASE_URL} router={routes } />
+  <RouterProvider basename={basePath} router={routes } />
 )
